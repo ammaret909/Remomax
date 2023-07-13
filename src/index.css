@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rmx_green {
+  background-color: rgb(217, 255, 49);
+  border: rgb(217, 255, 49);
+}
+
+.hover\:rmx_green:hover {
+  background-color: rgb(185, 218, 42);
+  border: rgb(185, 218, 42);
+}
+
+.rmx_blue {
+  background-color: rgb(0, 78, 137);
+  border: rgb(0, 78, 137);
+}
+
+.rmx_sky {
+  background-color: rgb(56, 169, 255);
+  border: rgb(56, 169, 255);
+}
+
+.hover\:rmx_sky:hover {
+  background-color: rgb(45, 140, 212);
+  border: rgb(45, 140, 212);
+}
+
+.top_position {
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .hidden_lx {
+    display: none;
+  }
+}
