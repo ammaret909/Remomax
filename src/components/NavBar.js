@@ -14,14 +14,14 @@ export default function NavBar() {
   }
   return (
     <div class="navbar rmx_blue grid grid-cols-12">
-      <div class="drawer sm:hidden grid col-span-2 sm:col-span-1 justify-end">
+      <div class="drawer sm:hidden grid col-span-2 sm:col-span-1 justify-start">
         <input
           id="my-drawer"
           type="checkbox"
           onClick={() => close_dropdown()}
           class="drawer-toggle"
         />
-        <div class="drawer-content ">
+        <div class="drawer-content">
           <label
             for="my-drawer"
             class="btn drawer-button rmx_green hover:rmx_green text-zinc-600"
@@ -82,8 +82,12 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div class="grid sm:col-span-2 px-2">
+      {/* <div class="grid sm:col-span-2 px-2">
         <a class="text-lg font-bold text-white">REMOMAX</a>
+      </div> */}
+
+      <div class="grid sm:col-span-2 px-2 ml-2 md:ml-4">
+        <img src="miti.jpg" className="md:w-20"></img>
       </div>
 
       <div class="hidden md:grid sm:col-span-10 ">

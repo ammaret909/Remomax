@@ -1,6 +1,31 @@
+import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
+import axios from "axios";
+
 export function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [checkbox, setCheckbox] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setCheckbox(!checkbox);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const response = axios.post("http://localhost:8000/api/login", {
+      email: email,
+      password: password,
+    });
+    Navigate("/");
+    console.log(response.data);
+  };
+
   return (
-    <div className="bg-white flex justify-center items-center min-h-screen p-2">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white flex justify-center items-center min-h-screen p-2"
+    >
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-sm">
         <div className="p-10 pb-4">
           <img className="object-cover" src="miti.jpg"></img>
@@ -11,13 +36,18 @@ export function Login() {
               className="block text-gray-700 text-sm font-bold mb-2"
               for="username"
             >
-              Username
+              Email
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="username"
               type="text"
-              placeholder="Enter your username"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              value={email}
+              placeholder="Enter your email"
+              required
             />
           </div>
           <div>
@@ -31,7 +61,12 @@ export function Login() {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
               type="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              value={password}
               placeholder="Enter your password"
+              required
             />
           </div>
 
@@ -39,8 +74,12 @@ export function Login() {
             <input
               id="link-checkbox"
               type="checkbox"
-              value=""
+              onChange={() => {
+                handleCheckboxChange();
+              }}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              value={checkbox}
+              required
             />
             <label
               for="link-checkbox"
@@ -59,8 +98,8 @@ export function Login() {
 
           <div className="flex flex-col md:justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
+              className="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
             >
               Sign In
             </button>
@@ -73,6 +112,6 @@ export function Login() {
           &copy; 2023 Company Name. All rights reserved.
         </p>
       </div>
-    </div>
+    </form>
   );
 }
