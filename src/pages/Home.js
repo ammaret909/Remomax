@@ -12,12 +12,12 @@ export function Home() {
       <div className=" grid grid-cols-12 min-h-screen">
         {/* memubar */}
         <div className="hidden sm:block col-span-3 lg:col-span-2 lx:grid rmx_blue">
-          <div>
-            <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2 ">
+          <div className="">
+            {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2 ">
               User Screen
-            </div>
-            <div className="grid justify-items-center">
-              <select class="btn w-11/12 bg-gray-50 border border-gray-300 text-zinc-600 rounded-lg block p-2.5 mr-2 ml-2 text-xs">
+            </div> */}
+            <div className="grid justify-items-center mb-8 m-1 mt-0">
+              <select class="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 block text-xs">
                 <option selected>Choose a Role</option>
                 <option>Admin1</option>
                 <option>Admin2</option>
@@ -27,10 +27,10 @@ export function Home() {
             </div>
           </div>
           <div>
-            <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
+            {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
               User Memu
-            </div>
-            <div className=" justify-items-center">
+            </div> */}
+            <div className="">
               <ButtonMenu topic="Sales & Marketing" />
               <ButtonMenu topic="Purchase" />
               <ButtonMenu topic="Inventory-Stores" />
