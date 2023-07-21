@@ -41,11 +41,11 @@ export default function NavBar() {
           <label for="my-drawer" class="drawer-overlay "></label>
           <div class="menu p-4 w-60 bg-base-200 top-auto rmx_blue text-white">
             <div>
-              <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
+              {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
                 User Screen
-              </div>
-              <div className="grid justify-items-center">
-                <select class="btn w-11/12 bg-gray-50 border border-gray-300 text-zinc-600 rounded-lg block p-2.5 mr-2 ml-2 text-xs">
+              </div> */}
+              <div className="grid justify-items-center mb-8 m-1">
+                <select class="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 rounded-lg block text-xs ">
                   <option selected>Choose a Role</option>
                   <option>Admin1</option>
                   <option>Admin2</option>
@@ -55,9 +55,9 @@ export default function NavBar() {
               </div>
             </div>
             <div>
-              <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
+              {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
                 User Memu
-              </div>
+              </div> */}
               <div className="justify-items-center">
                 <ButtonMenu topic="Sales & Marketing" />
                 <ButtonMenu topic="Purchase" />
@@ -181,10 +181,10 @@ export default function NavBar() {
                 <div class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                   {/* data */}
                   <li>
-                    <div>H3 1</div>
+                    <div className=" text-zinc-600">H3 1</div>
                   </li>
                   <li>
-                    <div>H3 2</div>
+                    <div className=" text-zinc-600">H3 2</div>
                   </li>
                 </div>
               </div>
