@@ -28,10 +28,7 @@ export function Login() {
     >
       <div className="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-sm">
         <div className="p-10 pb-4">
-          <img
-            className="object-cover p-4 pt-16 pb-16 rmx_blue rounded-md"
-            src="mitifinal.jpg"
-          ></img>
+          <img className="object-cover p-4 pt-16 pb-16 rmx_blue rounded-md"></img>
         </div>
         <div className="space-y-4">
           <div>
