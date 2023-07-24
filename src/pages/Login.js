@@ -26,9 +26,12 @@ export function Login() {
       onSubmit={handleSubmit}
       className="bg-white flex justify-center items-center min-h-screen p-2"
     >
-      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-sm">
+      <div className="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-sm">
         <div className="p-10 pb-4">
-          <img className="object-cover" src="miti.jpg"></img>
+          <img
+            className="object-cover p-4 pt-16 pb-16 rmx_blue rounded-md"
+            src="mitifinal.jpg"
+          ></img>
         </div>
         <div className="space-y-4">
           <div>
@@ -108,7 +111,7 @@ export function Login() {
             </div>
           </div>
         </div>
-        <p className="text-center text-zinc-600 text-xs mt-4 ">
+        <p className="text-center text-zinc-600 text-xs  ">
           &copy; 2023 Company Name. All rights reserved.
         </p>
       </div>

@@ -16,7 +16,7 @@ export function Home() {
             {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2 ">
               User Screen
             </div> */}
-            <div className="grid justify-items-center mb-8 m-1 mt-0">
+            <div className="grid justify-items-center m-1 mt-0 ">
               <select class="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 block text-xs">
                 <option selected>Choose a Role</option>
                 <option>Admin1</option>
@@ -26,6 +26,7 @@ export function Home() {
               </select>
             </div>
           </div>
+          <div className="border-b-2 m-3"></div>
           <div>
             {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
               User Memu

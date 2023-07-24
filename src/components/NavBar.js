@@ -8,10 +8,11 @@ export default function NavBar() {
   const [show, setShow] = useState(false);
 
   function close_dropdown() {
-    if (show != false) {
+    if (show !== false) {
       setShow(!show);
     }
   }
+
   return (
     <div class="navbar rmx_blue grid grid-cols-12">
       <div class="drawer sm:hidden grid col-span-2 sm:col-span-1 justify-start">
@@ -44,7 +45,7 @@ export default function NavBar() {
               {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
                 User Screen
               </div> */}
-              <div className="grid justify-items-center mb-8 m-1">
+              <div className="grid justify-items-center m-1">
                 <select class="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 rounded-lg block text-xs ">
                   <option selected>Choose a Role</option>
                   <option>Admin1</option>
@@ -54,10 +55,8 @@ export default function NavBar() {
                 </select>
               </div>
             </div>
+            <div className="border-b-2 m-3"></div>
             <div>
-              {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
-                User Memu
-              </div> */}
               <div className="justify-items-center">
                 <ButtonMenu topic="Sales & Marketing" />
                 <ButtonMenu topic="Purchase" />
@@ -82,12 +81,10 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* <div class="grid sm:col-span-2 px-2">
-        <a class="text-lg font-bold text-white">REMOMAX</a>
-      </div> */}
-
-      <div class="grid sm:col-span-2 px-2 ml-2 md:ml-4">
-        <img src="miti.jpg" className="md:w-20"></img>
+      <div class="grid col-span-3 sm:col-span-2 ml-2 md:ml-0 justify-center">
+        <div>
+          <img src="mitifinal.jpg" alt="Logo"></img>
+        </div>
       </div>
 
       <div class="hidden md:grid sm:col-span-10 ">
@@ -127,12 +124,11 @@ export default function NavBar() {
                 </svg>
               </label>
               <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                {/* data */}
                 <li>
-                  <a>H3 1</a>
+                  <div>H3 1</div>
                 </li>
                 <li>
-                  <a>H3 2</a>
+                  <div>H3 2</div>
                 </li>
               </ul>
             </div>
@@ -140,7 +136,7 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div class="md:hidden grid col-span-9 sm:col-span-10 justify-end">
+      <div class="md:hidden grid col-span-7 sm:col-span-10 justify-end">
         <div
           className="btn rmx_green hover:rmx_green text-zinc-600"
           onClick={() => setShow(!show)}
