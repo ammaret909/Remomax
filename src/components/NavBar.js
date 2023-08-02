@@ -14,21 +14,21 @@ export default function NavBar() {
   }
 
   return (
-    <div class="navbar rmx_blue grid grid-cols-12">
-      <div class="drawer sm:hidden grid col-span-2 sm:col-span-1 justify-start">
+    <div className="navbar rmx_blue grid grid-cols-12">
+      <div className="drawer sm:hidden grid col-span-2 sm:col-span-1 justify-start">
         <input
           id="my-drawer"
           type="checkbox"
           onClick={() => close_dropdown()}
-          class="drawer-toggle"
+          className="drawer-toggle"
         />
-        <div class="drawer-content">
+        <div className="drawer-content">
           <label
             for="my-drawer"
-            class="btn drawer-button rmx_green hover:rmx_green text-zinc-600"
+            className="btn drawer-button rmx_green hover:rmx_green text-zinc-600"
           >
             <svg
-              class="w-6 h-6 text-gray-800 "
+              className="w-6 h-6 text-gray-800 "
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -38,15 +38,15 @@ export default function NavBar() {
             </svg>
           </label>
         </div>
-        <div class="drawer-side">
-          <label for="my-drawer" class="drawer-overlay "></label>
-          <div class="menu p-4 w-60 bg-base-200 top-auto rmx_blue text-white">
+        <div className="drawer-side">
+          <label for="my-drawer" className="drawer-overlay "></label>
+          <div className="menu p-4 w-60 bg-base-200 top-auto rmx_blue text-white">
             <div>
               {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
                 User Screen
               </div> */}
               <div className="grid justify-items-center m-1">
-                <select class="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 rounded-lg block text-xs ">
+                <select className="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 rounded-lg block text-xs ">
                   <option selected>Choose a Role</option>
                   <option>Admin1</option>
                   <option>Admin2</option>
@@ -81,15 +81,15 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div class="grid col-span-3 sm:col-span-2 ml-2 md:ml-0 justify-center">
+      <div className="grid col-span-3 sm:col-span-2 ml-2 md:ml-0 justify-center">
         <div>
-          <img src="mitifinal.jpg" alt="Logo"></img>
+          <img src="miti.jpg" alt="Logo"></img>
         </div>
       </div>
 
-      <div class="hidden md:grid sm:col-span-10 ">
-        <div class="grid grid-cols-12">
-          <div class="col-span-11 ">
+      <div className="hidden md:grid sm:col-span-10 ">
+        <div className="grid grid-cols-12">
+          <div className="col-span-11 ">
             {/* data */}
             <ButtonH2 topic="Finance&Accounting" />
             <ButtonH2 topic="R&D" />
@@ -101,14 +101,14 @@ export default function NavBar() {
             <ButtonH2 topic="Studio" />
           </div>
 
-          <div class="grid col-span-1 content-center">
-            <div class="dropdown dropdown-hover dropdown-left justify-self-center">
+          <div className="grid col-span-1 content-center">
+            <div className="dropdown dropdown-hover dropdown-left justify-self-center">
               <label
                 tabindex="0"
-                class="btn m-1bg-current rmx_green hover:rmx_green text-zinc-600"
+                className="btn m-1bg-current rmx_green hover:rmx_green text-zinc-600"
               >
                 <svg
-                  class="w-6 h-6 text-gray-800"
+                  className="w-6 h-6 text-gray-800"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -123,7 +123,7 @@ export default function NavBar() {
                   />
                 </svg>
               </label>
-              <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+              <ul className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
                   <div>H3 1</div>
                 </li>
@@ -136,13 +136,13 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div class="md:hidden grid col-span-7 sm:col-span-10 justify-end">
+      <div className="md:hidden grid col-span-7 sm:col-span-10 justify-end">
         <div
           className="btn rmx_green hover:rmx_green text-zinc-600"
           onClick={() => setShow(!show)}
         >
           <svg
-            class="w-6 h-6 text-gray-800"
+            className="w-6 h-6 text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -171,10 +171,10 @@ export default function NavBar() {
             <div className=" col-span-1 justify-center shadow-md">
               {/* data */}
               <div className="btn block py-2 px-4 text-sm dropdown dropdown-hover btn-ghost text-white">
-                <div tabindex="0" class=" m-1">
+                <div tabindex="0" className=" m-1">
                   <div>H3</div>
                 </div>
-                <div class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <div className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                   {/* data */}
                   <li>
                     <div className=" text-zinc-600">H3 1</div>
