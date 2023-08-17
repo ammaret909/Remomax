@@ -1,36 +1,62 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [checkbox, setCheckbox] = useState(false);
+  const [statusLogin, setStatusLogin] = useState();
 
   const handleCheckboxChange = () => {
     setCheckbox(!checkbox);
   };
 
-  const handleSubmit = (e) => {
+  const LoginSS = (e) => {
     e.preventDefault();
-    const response = axios.post("http://localhost:8000/api/login", {
-      email: email,
-      password: password,
+    navigate("/home");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const resBody = {
+      userid: email,
+      drawssap: password,
+    };
+    //http://localhost:8080/check/login
+    const response = await fetch(`http://localhost:8080/check/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(resBody),
     });
-    Navigate("/");
-    console.log(response.data);
+
+    if (response.ok) {
+      const data = await response.json();
+      alert(data.massage);
+      navigate("/home");
+      console.log(data);
+    } else {
+      const data = await response.json();
+      alert(data.massage);
+      console.log(data);
+    }
   };
 
   return (
     <form
-      onSubmit={handleSubmit}
       className="bg-white flex justify-center items-center min-h-screen p-2"
+      onSubmit={handleSubmit}
     >
       <div className="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-sm">
-        <div className="p-10 pb-4">
+        <div className=" pb-4">
           <img
-            className="object-cover p-4 pt-16 pb-16 rmx_blue rounded-md"
-            src="mitifinal.jpg"
+            //pt-16 pb-16
+            className="object-cover p-4 rmx_blue "
+            src="miti.jpg"
             alt="Logo"
           ></img>
         </div>

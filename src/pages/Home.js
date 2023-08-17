@@ -17,7 +17,7 @@ export function Home() {
               User Screen
             </div> */}
             <div className="grid justify-items-center m-1 mt-0 ">
-              <select class="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 block text-xs">
+              <select className="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 block text-xs">
                 <option selected>Choose a Role</option>
                 <option>Admin1</option>
                 <option>Admin2</option>
