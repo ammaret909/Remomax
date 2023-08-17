@@ -6,10 +6,24 @@ import ButtonMenu from "./ButtonMenu";
 export default function NavBar() {
   initTE({ Sidenav });
   const [show, setShow] = useState(false);
+  const [showH1, setShowH1] = useState(false);
+  const [showH2, setShowH2] = useState(false);
 
   function close_dropdown() {
     if (show !== false) {
       setShow(!show);
+    }
+  }
+
+  function close_dropdownH1() {
+    if (showH1 !== false) {
+      setShow(!showH1);
+    }
+  }
+
+  function close_dropdownH2() {
+    if (showH2 !== false) {
+      setShow(!showH2);
     }
   }
 
@@ -42,9 +56,6 @@ export default function NavBar() {
           <label for="my-drawer" className="drawer-overlay "></label>
           <div className="menu p-4 w-60 bg-base-200 top-auto rmx_blue text-white">
             <div>
-              {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
-                User Screen
-              </div> */}
               <div className="grid justify-items-center m-1">
                 <select className="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 rounded-lg block text-xs ">
                   <option selected>Choose a Role</option>
@@ -125,10 +136,10 @@ export default function NavBar() {
               </label>
               <ul className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
-                  <div>H3 1</div>
+                  <div>menu H3 1</div>
                 </li>
                 <li>
-                  <div>H3 2</div>
+                  <div>menu H3 2</div>
                 </li>
               </ul>
             </div>
@@ -156,34 +167,41 @@ export default function NavBar() {
       <div className="grid col-span-12">
         {show ? (
           <div className=" grid grid-cols-1 rmx_blue hidden_lx">
-            <div className=" col-span-1 justify-center shadow-md">
+            <div className=" col-span-1 justify-center shadow-md ">
               {/* data */}
-              <ButtonH2Mobile topic="Finance&Accounting" />
-              <ButtonH2Mobile topic="R&D" />
-              <ButtonH2Mobile topic="SalesOnlineJenya" />
-              <ButtonH2Mobile topic="BoothRepair" />
-              <ButtonH2Mobile topic="StockReason" />
-              <ButtonH2Mobile topic="Manufacturing" />
-              <ButtonH2Mobile topic="Internal Borrow" />
-              <ButtonH2Mobile topic="Studio" />
+              <div
+                onClick={() => setShowH1(!showH1)}
+                className="btn grid content-center px-4 text-sm btn-ghost runded-btn text-white hover:rmx_blue"
+              >
+                H2
+              </div>
+              {showH1 ? (
+                <div>
+                  <ButtonH2Mobile topic="R&D" />
+                  <ButtonH2Mobile topic="SalesOnlineJenya" />
+                  <ButtonH2Mobile topic="BoothRepair" />
+                  <ButtonH2Mobile topic="StockReason" />
+                  <ButtonH2Mobile topic="Manufacturing" />
+                  <ButtonH2Mobile topic="Internal Borrow" />
+                  <ButtonH2Mobile topic="Studio" />
+                </div>
+              ) : null}
             </div>
 
             <div className=" col-span-1 justify-center shadow-md">
               {/* data */}
-              <div className="btn block py-2 px-4 text-sm dropdown dropdown-hover btn-ghost text-white">
-                <div tabindex="0" className=" m-1">
-                  <div>H3</div>
-                </div>
-                <div className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                  {/* data */}
-                  <li>
-                    <div className=" text-zinc-600">H3 1</div>
-                  </li>
-                  <li>
-                    <div className=" text-zinc-600">H3 2</div>
-                  </li>
-                </div>
+              <div
+                onClick={() => setShowH2(!showH2)}
+                className="btn grid content-center px-4 text-sm btn-ghost runded-btn text-white hover:rmx_blue"
+              >
+                H3
               </div>
+              {showH2 ? (
+                <div>
+                  <ButtonH2Mobile topic="memu H3 1" />
+                  <ButtonH2Mobile topic="menu H3 2" />
+                </div>
+              ) : null}
             </div>
           </div>
         ) : null}

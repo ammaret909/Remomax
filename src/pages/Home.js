@@ -13,9 +13,6 @@ export function Home() {
         {/* memubar */}
         <div className="hidden sm:block col-span-3 lg:col-span-2 lx:grid rmx_blue">
           <div className="">
-            {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2 ">
-              User Screen
-            </div> */}
             <div className="grid justify-items-center m-1 mt-0 ">
               <select className="btn w-full bg-gray-50 border border-gray-300 text-zinc-600 block text-xs">
                 <option selected>Choose a Role</option>
@@ -28,9 +25,6 @@ export function Home() {
           </div>
           <div className="border-b-2 m-3"></div>
           <div>
-            {/* <div className="py-3.5 text-md rounded-box shadow-xl rmx_green text-zinc-600 text-center m-2">
-              User Memu
-            </div> */}
             <div className="">
               <ButtonMenu topic="Sales & Marketing" />
               <ButtonMenu topic="Purchase" />
