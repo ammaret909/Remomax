@@ -17,6 +17,11 @@
   border: rgb(0, 78, 137);
 }
 
+.hover\:rmx_blue:hover {
+  background-color: rgb(0, 68, 120);
+  border: rgb(0, 68, 120);
+}
+
 .rmx_sky {
   background-color: rgb(56, 169, 255);
   border: rgb(56, 169, 255);

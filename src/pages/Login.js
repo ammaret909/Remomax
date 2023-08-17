@@ -18,6 +18,12 @@ export function Login() {
     navigate("/home");
   };
 
+  let headers = new Headers();
+  headers.append("Content-Type", "application/json");
+  headers.append("Accept", "application/json");
+  headers.append("Access-Control-Allow-Origin", "*");
+  headers.append("Access-Control-Allow-Credentials", "true");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,14 +31,17 @@ export function Login() {
       userid: email,
       drawssap: password,
     };
-    //http://localhost:8080/check/login
-    const response = await fetch(`http://localhost:8080/check/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(resBody),
-    });
+    ///RemomaxBE 127.0.0.2
+    const response = await fetch(
+      `http://3.133.137.68:8080/RemomaxBE/check/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(resBody),
+      }
+    );
 
     if (response.ok) {
       const data = await response.json();
